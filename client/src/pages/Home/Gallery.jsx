@@ -6,6 +6,11 @@ import ceremony1 from "../../assets/gallery/ceremony1.jpg";
 import ceremony2 from "../../assets/gallery/ceremony2.jpg";
 import ceremony3 from "../../assets/gallery/ceremony3.jpg";
 import ceremony4 from "../../assets/gallery/ceremony4.jpg";
+import ceremony5 from "../../assets/gallery/ceremony5.jpg";
+import ceremony6 from "../../assets/gallery/ceremony6.jpg";
+import ceremony7 from "../../assets/gallery/ceremony7.jpg";
+import ceremony8 from "../../assets/gallery/ceremony8.jpg";
+import ceremony9 from "../../assets/gallery/ceremony9.jpg";
 
 import decor from "../../assets/gallery/decor.jpg";
 import decor1 from "../../assets/gallery/decor1.jpg";
@@ -20,24 +25,32 @@ import venue4 from "../../assets/gallery/venue4.jpg";
 import venue5 from "../../assets/gallery/venue5.jpg";
 import venue6 from "../../assets/gallery/venue6.jpg";
 
-const galleryImages = [
+ const galleryImages = [
+  // Ceremony
   { id: 1, category: "Ceremony", image: ceremony1 },
   { id: 2, category: "Ceremony", image: ceremony2 },
   { id: 3, category: "Ceremony", image: ceremony3 },
   { id: 4, category: "Ceremony", image: ceremony4 },
+  { id: 5, category: "Ceremony", image: ceremony5 },
+  { id: 6, category: "Ceremony", image: ceremony6 },
+  { id: 7, category: "Ceremony", image: ceremony7 },
+  { id: 8, category: "Ceremony", image: ceremony8 },
+  { id: 9, category: "Ceremony", image: ceremony9 },
 
-  { id: 5, category: "Decor", image: decor },
-  { id: 6, category: "Decor", image: decor1 },
-  { id: 7, category: "Decor", image: decor2 },
-  { id: 8, category: "Decor", image: decor3 },
-  { id: 9, category: "Decor", image: decor4 }, // ✅ Added
+  // Decor
+  { id: 10, category: "Decor", image: decor },
+  { id: 11, category: "Decor", image: decor1 },
+  { id: 12, category: "Decor", image: decor2 },
+  { id: 13, category: "Decor", image: decor3 },
+  { id: 14, category: "Decor", image: decor4 },
 
-  { id: 10, category: "Venues", image: venue1 },
-  { id: 11, category: "Venues", image: venue2 },
-  { id: 12, category: "Venues", image: venue3 },
-  { id: 13, category: "Venues", image: venue4 },
-  { id: 14, category: "Venues", image: venue5 },
-  { id: 15, category: "Venues", image: venue6 },
+  // Venues
+  { id: 15, category: "Venues", image: venue1 },
+  { id: 16, category: "Venues", image: venue2 },
+  { id: 17, category: "Venues", image: venue3 },
+  { id: 18, category: "Venues", image: venue4 },
+  { id: 19, category: "Venues", image: venue5 },
+  { id: 20, category: "Venues", image: venue6 },
 ];
 
 const categories = [
