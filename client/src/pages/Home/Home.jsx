@@ -3,6 +3,8 @@ import Hero from "./Hero";
 import Footer from "../../components/layout/Footer";
 import Features from "./Features";
 import DashboardPreview from "./DashboardPreview";
+//import Gallery from "./Gallery";
+import Gallery from "./Gallery";
 
 const Home = () => {
   return (
@@ -11,6 +13,7 @@ const Home = () => {
       <Hero />
       <Features />
         <DashboardPreview />
+        <Gallery />
         <Footer />
     </>
   );
