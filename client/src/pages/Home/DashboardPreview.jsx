@@ -100,16 +100,16 @@ function ProgressBar() {
 
   return (
     <div ref={ref} className="w-full">
-      <div className="flex items-center justify-between text-sm text-gray-400">
+      <div className="flex items-center justify-between text-sm text-[#6B665E]">
         <span>Overall Progress</span>
-        <span className="font-semibold text-white">{width}%</span>
+        <span className="font-semibold text-[#3B342C]">{width}%</span>
       </div>
-      <div className="mt-2 h-3 w-full overflow-hidden rounded-full bg-white/10">
+      <div className="mt-2 h-3 w-full overflow-hidden rounded-full bg-[#F7F3EC]">
         <motion.div
           initial={{ width: "0%" }}
           animate={{ width: `${width}%` }}
           transition={{ duration: 1.4, ease: "easeOut" }}
-          className="h-full rounded-full bg-linear-to-r from-[#7C3AED] to-[#EC4899]"
+          className="h-full rounded-full bg-[#C8A96A]"
         />
       </div>
     </div>
@@ -123,12 +123,12 @@ export default function DashboardPreview() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
       variants={sectionVariants}
-      className="relative w-full overflow-hidden bg-gradient-to-b from-[#0F172A] via-[#1E1B4B] to-[#312E81] py-28"
+      className="relative w-full overflow-hidden bg-gradient-to-b from-[#F7F3EC] via-[#FBF8F2] to-[#F7F3EC] py-28"
     >
-      {/* Ambient glow orbs — consistent with Hero/Features */}
-      <div className="pointer-events-none absolute -top-32 -left-20 h-96 w-96 rounded-full bg-[#7C3AED]/25 blur-[120px]" />
-      <div className="pointer-events-none absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-[#EC4899]/20 blur-[120px]" />
-      <div className="pointer-events-none absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-[#FACC15]/10 blur-[110px]" />
+      {/* Ambient soft gold/cream glows — consistent with Hero/Footer */}
+      <div className="pointer-events-none absolute -top-32 -left-20 h-96 w-96 rounded-full bg-[#C8A96A]/15 blur-[120px]" />
+      <div className="pointer-events-none absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-[#C8A96A]/10 blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-[#E7DFD2]/40 blur-[110px]" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
         {/* Heading */}
@@ -136,19 +136,19 @@ export default function DashboardPreview() {
           variants={headingVariants}
           className="mx-auto mb-20 flex max-w-3xl flex-col items-center text-center"
         >
-          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium text-pink-200 backdrop-blur-md">
+          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E7DFD2] bg-white px-4 py-1.5 text-sm font-medium text-[#C8A96A] shadow-sm">
             ✨ AI Dashboard Preview
           </span>
-          <h2 className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="font-serif text-3xl font-bold leading-tight tracking-tight text-[#3B342C] sm:text-4xl lg:text-5xl">
             Experience Your{" "}
-            <span className="bg-linear-to-r from-[#7C3AED] to-[#EC4899] bg-clip-text text-transparent">
+            <span className="text-[#C8A96A]">
               Wedding Dashboard
             </span>{" "}
             Planning Dashboard
           </h2>
           <motion.p
             variants={headingVariants}
-            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg"
+            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[#6B665E] sm:text-lg"
           >
             Manage every part of your wedding with one intelligent AI dashboard.
           </motion.p>
@@ -165,13 +165,13 @@ export default function DashboardPreview() {
             <motion.div
               whileHover={{ y: -8, scale: 1.01 }}
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
-              className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg shadow-black/20 backdrop-blur-md transition-shadow duration-300 hover:shadow-[0_0_35px_rgba(124,58,237,0.35)] sm:p-10"
+              className="group relative rounded-[28px] border border-[#E7DFD2] bg-white p-8 shadow-lg shadow-[#3B342C]/5 transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(200,169,106,0.25)] sm:p-10"
             >
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="font-serif text-xl font-semibold text-[#3B342C]">
                   Wedding Progress
                 </h3>
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-[#7C3AED] to-[#EC4899] shadow-lg shadow-purple-900/30">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#C8A96A] shadow-md shadow-[#C8A96A]/30">
                   <Sparkles className="h-5 w-5 text-white" />
                 </div>
               </div>
@@ -184,10 +184,10 @@ export default function DashboardPreview() {
                 {tasks.map((task) => (
                   <div
                     key={task}
-                    className="flex items-center gap-2.5 rounded-2xl border border-white/5 bg-white/5 px-4 py-3"
+                    className="flex items-center gap-2.5 rounded-2xl border border-[#E7DFD2] bg-[#F7F3EC] px-4 py-3"
                   >
-                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#EC4899]" />
-                    <span className="text-sm text-gray-300">{task}</span>
+                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-[#C8A96A]" />
+                    <span className="text-sm text-[#6B665E]">{task}</span>
                   </div>
                 ))}
               </div>
@@ -197,29 +197,29 @@ export default function DashboardPreview() {
             <motion.div
               whileHover={{ y: -8, scale: 1.01 }}
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
-              className="group relative flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg shadow-black/20 backdrop-blur-md transition-shadow duration-300 hover:shadow-[0_0_35px_rgba(236,72,153,0.3)] sm:flex-row sm:items-center sm:justify-between sm:p-10"
+              className="group relative flex flex-col gap-6 rounded-[28px] border border-[#E7DFD2] bg-white p-8 shadow-lg shadow-[#3B342C]/5 transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(200,169,106,0.25)] sm:flex-row sm:items-center sm:justify-between sm:p-10"
             >
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#7C3AED] to-[#EC4899] shadow-lg shadow-purple-900/30">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#C8A96A] shadow-md shadow-[#C8A96A]/30">
                   <Calendar className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-gray-400">
+                  <p className="text-xs uppercase tracking-wider text-[#6B665E]">
                     Wedding Date
                   </p>
-                  <p className="mt-1 text-lg font-semibold text-white">
+                  <p className="mt-1 text-lg font-semibold text-[#3B342C]">
                     14 February 2027
                   </p>
                 </div>
               </div>
 
-              <div className="h-px w-full bg-white/10 sm:h-10 sm:w-px" />
+              <div className="h-px w-full bg-[#E7DFD2] sm:h-10 sm:w-px" />
 
               <div>
-                <p className="text-xs uppercase tracking-wider text-gray-400">
+                <p className="text-xs uppercase tracking-wider text-[#6B665E]">
                   Upcoming Event
                 </p>
-                <p className="mt-1 text-lg font-semibold text-white">
+                <p className="mt-1 text-lg font-semibold text-[#3B342C]">
                   Venue Visit
                 </p>
               </div>
@@ -235,19 +235,19 @@ export default function DashboardPreview() {
             <motion.div
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
-              className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg shadow-black/20 backdrop-blur-md transition-shadow duration-300 hover:shadow-[0_0_35px_rgba(124,58,237,0.35)]"
+              className="group relative rounded-[28px] border border-[#E7DFD2] bg-white p-8 shadow-lg shadow-[#3B342C]/5 transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(200,169,106,0.25)]"
             >
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="font-serif text-xl font-semibold text-[#3B342C]">
                 AI Recommendations
               </h3>
 
               <div className="mt-6 flex flex-col gap-4">
                 {recommendations.map(({ icon: Icon, title }) => (
                   <div key={title} className="flex items-center gap-3.5">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#7C3AED] to-[#EC4899] shadow-lg shadow-purple-900/30">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#C8A96A] shadow-md shadow-[#C8A96A]/30">
                       <Icon className="h-4.5 w-4.5 text-white" />
                     </div>
-                    <span className="text-sm text-gray-300">{title}</span>
+                    <span className="text-sm text-[#6B665E]">{title}</span>
                   </div>
                 ))}
               </div>
@@ -257,9 +257,9 @@ export default function DashboardPreview() {
             <motion.div
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
-              className="group relative flex-1 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg shadow-black/20 backdrop-blur-md transition-shadow duration-300 hover:shadow-[0_0_35px_rgba(236,72,153,0.3)]"
+              className="group relative flex-1 rounded-[28px] border border-[#E7DFD2] bg-white p-8 shadow-lg shadow-[#3B342C]/5 transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(200,169,106,0.25)]"
             >
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="font-serif text-xl font-semibold text-[#3B342C]">
                 Album Preview
               </h3>
 
@@ -268,7 +268,7 @@ export default function DashboardPreview() {
   {dashboardImages.map((img, index) => (
     <div
       key={index}
-      className="overflow-hidden rounded-2xl h-40"
+      className="overflow-hidden rounded-2xl h-40 border border-[#E7DFD2]"
     >
       <img
         src={img}
@@ -282,7 +282,7 @@ export default function DashboardPreview() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-[#7C3AED] to-[#EC4899] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-900/30 transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(124,58,237,0.6)]"
+                className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-[#C8A96A] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#C8A96A]/30 transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(200,169,106,0.5)]"
               >
                 View Album
                 <ArrowRight className="h-4 w-4" />
@@ -302,17 +302,17 @@ export default function DashboardPreview() {
               variants={bottomCardVariants}
               whileHover={{ y: -6, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
-              className="group relative flex items-center gap-4 rounded-3xl border border-white/10 bg-white/5 p-7 shadow-lg shadow-black/20 backdrop-blur-md transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]"
+              className="group relative flex items-center gap-4 rounded-[28px] border border-[#E7DFD2] bg-white p-7 shadow-lg shadow-[#3B342C]/5 transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(200,169,106,0.25)]"
             >
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#7C3AED] to-[#EC4899] shadow-lg shadow-purple-900/30">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#C8A96A] shadow-md shadow-[#C8A96A]/30">
                 <Icon className="h-5 w-5 text-white" />
               </div>
               <div>
-                <p className="text-xs uppercase tracking-wider text-gray-400">
+                <p className="text-xs uppercase tracking-wider text-[#6B665E]">
                   {label}
                 </p>
-                <p className="mt-1 text-xl font-bold text-white">{value}</p>
-                <p className="mt-0.5 text-xs text-gray-400">{sub}</p>
+                <p className="mt-1 text-xl font-bold text-[#3B342C]">{value}</p>
+                <p className="mt-0.5 text-xs text-[#6B665E]">{sub}</p>
               </div>
             </motion.div>
           ))}
