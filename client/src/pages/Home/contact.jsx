@@ -23,24 +23,14 @@ import {
 /* Static data                                                         */
 /* ------------------------------------------------------------------ */
 
-// const contactInfo = [
-//   { icon: Mail, label: "Email", value: "hello@wedai.com" },
-//   { icon: Phone, label: "Phone", value: "+91 98765 43210" },
-//   { icon: MapPin, label: "Office", value: "New Delhi, India" },
-//   { icon: Clock, label: "Working Hours", value: "Mon – Sat, 10AM – 7PM" },
-// ];
+
 const contactInfo = [
   { icon: Mail, label: "Email", value: "hello@wedai.com" },
   { icon: Phone, label: "Phone", value: "+91 98765 43210" },
   { icon: MapPin, label: "Office", value: "New Delhi, India" },
   { icon: Clock, label: "Working Hours", value: "Mon – Sat, 10AM – 7PM" },
 ];
-// const socialLinks = [
-//   { icon: FaFacebookF, href: "#", label: "Facebook" },
-//   { icon: FaInstagram, href: "#", label: "Instagram" },
-//   { icon: FaTwitter, href: "#", label: "Twitter" },
-//   { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
-// ];
+
 const socialLinks = [
   { icon: FaFacebookF, href: "#", label: "Facebook" },
   { icon: FaInstagram, href: "#", label: "Instagram" },
