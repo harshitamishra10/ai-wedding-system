@@ -1,25 +1,13 @@
-// import { Feature } from "framer-motion";
-// import Home from "./pages/Home/Home";
-
-// function App() {
-//   return <Home />;
-//   return <Feature />;
-// }
-
-// export default App;
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import FeatureDetail from "./components/sections/FeatureDetail";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import { Feature } from "framer-motion";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/features/:slug" element={<FeatureDetail />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+       <Route path="/ Feature" element={<Feature />} />
+    </Routes>
   );
 }
 

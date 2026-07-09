@@ -120,6 +120,7 @@ export default function DashboardPreview() {
   return (
     <motion.section
       initial="hidden"
+       id="workflow"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
       variants={sectionVariants}

@@ -120,11 +120,19 @@ export default function Features() {
 
   return (
     <motion.section
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
-      variants={sectionVariants}
-      className="relative w-full overflow-hidden bg-linear-to-b from-[#F7F3EC] via-[#FBF8F2] to-[#F7F3EC] py-28"
+      // initial="hidden"
+      // whileInView="visible"
+      // viewport={{ once: true, amount: 0.1 }}
+      // variants={sectionVariants}
+      // className="relative w-full overflow-hidden bg-linear-to-b from-[#F7F3EC] via-[#FBF8F2] to-[#F7F3EC] py-28"
+      
+  id="features"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.1 }}
+  variants={sectionVariants}
+  className="relative w-full overflow-hidden bg-linear-to-b from-[#F7F3EC] via-[#FBF8F2] to-[#F7F3EC] py-28"
+
     >
       {/* Ambient soft gold/cream glows — consistent with Hero */}
       <div className="pointer-events-none absolute -top-32 -left-20 h-96 w-96 rounded-full bg-[#C8A96A]/15 blur-[120px]" />

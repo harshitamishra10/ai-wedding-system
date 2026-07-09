@@ -5,6 +5,10 @@ import DashboardPreview from "./DashboardPreview";
 import Gallery from "./Gallery";
 import Footer from "../../components/layout/Footer";
 import Celebrations from "./Celebrations";
+//import { Contact } from "lucide-react";
+//import Testimonials from "./Testimonials";
+import Contact from "./contact";
+
 
 const Home = () => {
   return (
@@ -15,6 +19,8 @@ const Home = () => {
       <Features />
         <DashboardPreview />
         <Gallery />
+        {/* <Testimonials /> */}
+        <Contact /> 
         <Footer />
     </>
   );
