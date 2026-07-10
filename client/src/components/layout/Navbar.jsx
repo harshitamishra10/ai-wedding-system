@@ -63,7 +63,7 @@ const Navbar = () => {
             to="/#contact"
             className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
           >
-            Contact
+            Contact Us
           </HashLink>
 
         </nav>
