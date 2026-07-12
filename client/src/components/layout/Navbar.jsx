@@ -1,15 +1,15 @@
 // 
 
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+//import { HashLink } from "react-router-hash-link";
 import { Menu } from "lucide-react";
 import logo from "../../assets/logo/WEDAI.jpg";
 
 const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-[#F7F3EC]/95 backdrop-blur-md border-b border-[#ece5d8]">
-      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-8">
-
+      {/* <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-8"> */}
+<div className="mx-auto flex h-24 max-w-screen-2xl items-center justify-between px-6">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
@@ -23,53 +23,56 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Desktop Menu */}
+        
         <nav className="hidden lg:flex items-center gap-10">
 
-          <HashLink
-            smooth
-            to="/#home"
-            className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
-          >
-            Home
-          </HashLink>
+          <Link
+  to="/"
+  className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
+>
+  Home
+</Link>
 
-          <HashLink
-            smooth
-            to="/#features"
-            className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
-          >
-            Features
-          </HashLink>
+          <Link
+  to="/features"
+  className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
+>
+  Features
+</Link>
 
-          <HashLink
-            smooth
-            to="/#workflow"
-            className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
-          >
-            Dashboard
-          </HashLink>
+          <Link
+  to="/dashboard"
+  className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
+>
+  Dashboard
+</Link>
 
-          <HashLink
-            smooth
-            to="/#gallery"
-            className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
-          >
-            Gallery
-          </HashLink>
+          
+          <Link
+  to="/gallery"
+  className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
+>
+  Gallery
+</Link>
+        
+<Link
+  to="/testimonials"
+  className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
+>
+  Testimonials
+</Link>
 
-          <HashLink
-            smooth
-            to="/#contact"
-            className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
-          >
-            Contact Us
-          </HashLink>
-
+          
+<Link
+  to="/contact"
+  className="uppercase tracking-[3px] text-[14px] text-[#444] hover:text-[#C8A96A] transition"
+>
+  Contact Us
+</Link>
         </nav>
 
         {/* Buttons */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-3">
 
           <Link
             to="/login"

@@ -119,65 +119,8 @@ function StarRating() {
 /* Testimonial Card                                                    */
 /* ------------------------------------------------------------------ */
 
-// function TestimonialCard({ testimonial, isCenter }) {
-//   const { name, location, date, review, avatar } = testimonial;
 
-//   return (
-//     <motion.div
-//       variants={cardVariants}
-//       whileHover={{ y: -10, scale: isCenter ? 1.06 : 1.03 }}
-//       transition={{ type: "spring", stiffness: 260, damping: 20 }}
-//       className={`group relative flex flex-col rounded-[28px] border p-8 shadow-lg backdrop-blur-xl transition-shadow duration-300 sm:p-10 ${
-//         isCenter
-//           ? "z-10 border-[#C8A96A]/40 bg-white/90 shadow-2xl shadow-[#C8A96A]/20 lg:scale-105"
-//           : "border-[#E7DFD2] bg-white/80 shadow-[#3B342C]/5 lg:scale-95"
-//       }`}
-//     >
-//       {/* Glow behind the center card */}
-//       {isCenter && (
-//         <motion.div
-//           animate={{ opacity: [0.4, 0.7, 0.4] }}
-//           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-//           className="pointer-events-none absolute -inset-6 -z-10 rounded-[36px] bg-[#C8A96A]/20 blur-[50px]"
-//         />
-//       )}
 
-//       {/* Decorative quote icon */}
-//       <Quote className="h-8 w-8 text-[#C8A96A]/30" />
-
-//       {/* Quote */}
-//       <p className="mt-4 flex-1 text-base leading-relaxed text-[#3B342C] sm:text-lg">
-//         “{review}”
-//       </p>
-
-//       {/* Stars */}
-//       <div className="mt-6">
-//         <StarRating />
-//       </div>
-
-//       {/* Divider */}
-//       <div className="mt-6 h-px w-full bg-[#E7DFD2]" />
-
-//       {/* Profile */}
-//       <div className="mt-6 flex items-center gap-4">
-//         <img
-//           src={avatar}
-//           alt={name}
-//           className="h-14 w-14 flex-shrink-0 rounded-full border-2 border-[#E7DFD2] object-cover shadow-sm"
-//         />
-//         <div>
-//           <p className="font-serif text-lg font-semibold text-[#3B342C]">
-//             {name}
-//           </p>
-//           <p className="text-sm text-[#6B665E]">{location}</p>
-//           <p className="mt-0.5 text-xs uppercase tracking-wider text-[#C8A96A]">
-//             {date}
-//           </p>
-//         </div>
-//       </div>
-//     </motion.div>
-//   );
-// }
 function TestimonialCard({ testimonial, isCenter }) {
   const navigate = useNavigate();
 
@@ -188,7 +131,16 @@ function TestimonialCard({ testimonial, isCenter }) {
       variants={cardVariants}
       whileHover={{ y: -10, scale: isCenter ? 1.06 : 1.03 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      onClick={() => navigate(`/testimonial/${id}`)}
+      // onClick={() => navigate(`/testimonial/${id}`)}
+      onClick={() => {
+  navigate(`/testimonial/${id}`);
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, 0);
+}}
       className={`group relative flex cursor-pointer flex-col rounded-[28px] border p-8 shadow-lg backdrop-blur-xl transition-shadow duration-300 sm:p-10 ${
         isCenter
           ? "z-10 border-[#C8A96A]/40 bg-white/90 shadow-2xl shadow-[#C8A96A]/20 lg:scale-105"
