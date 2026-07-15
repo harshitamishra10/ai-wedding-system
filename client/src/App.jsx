@@ -38,11 +38,15 @@ import GalleryPage from "./pages/GalleryPage";
 import DashboardPage from "./pages/DashboardPage";
 import ContactPage from "./pages/ContactPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
+import Register from "./pages/Register/Register";
+
+
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/register" element={<Register />} />
 
       <Route path="/features" element={<FeaturesPage />} />
       <Route path="/dashboard" element={<DashboardPage />} />
